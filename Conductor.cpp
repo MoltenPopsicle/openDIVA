@@ -37,7 +37,7 @@ class Conductor {
 			_offsetInMs = offsetInMs;
 			startTime = std::chrono::high_resolution_clock::now(); 
 			totalBeats = getTotalBeats(_lengthInS, _bpm) - offsetBeats; 
-			offsetBeats = getTotalBeats(_offsetInMs / 1000, _bpm);
+			offsetBeats = getTotalBeats((double) _offsetInMs / 1000, _bpm);
 		}
 
 		void conduct();
