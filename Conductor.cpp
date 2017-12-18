@@ -50,7 +50,7 @@ void Conductor::refreshMembers() {
 }
 
 void Conductor::conduct() {
-	auto startTimeT = std::chrono::system_clock::to_time_t(std::chrono::high_resolution_clock::now());
+	auto startTimeT = std::chrono::system_clock::to_time_t(startTime);
 	time_t currTimeT;
 	while(timeDiff.count() / 1000 < _lengthInS) {
 		refreshMembers();
